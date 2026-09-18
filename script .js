@@ -1,8 +1,4 @@
-/*
-  CINEZONE
-  1) Put your TMDB API key below.
-  2) Keep this file private if you later add a backend; a browser-side key can be viewed by visitors.
-*/
+
 const TMDB_API_KEY = "1014c047929e9eceb961569f659f59cd";
 const API_BASE = "https://api.themoviedb.org/3";
 const IMG = "https://image.tmdb.org/t/p/w500";
