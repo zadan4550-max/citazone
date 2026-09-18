@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CineZone - Discover movies, ratings, genres, cast and trailers.">
+  <title>CineZone — Movie Discovery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#" aria-label="CineZone home">
+        <span class="logo-mark">▶</span><span>Cine<span>Zone</span></span>
+      </a>
+      <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#popular">Popular</a>
+        <a href="#trending">Trending</a>
+        <a href="#upcoming">Upcoming</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#home">Home</a><a href="#popular">Popular</a><a href="#trending">Trending</a><a href="#upcoming">Upcoming</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">CINEMA DISCOVERY</p>
+        <h1>Find your next<br><span>favorite movie.</span></h1>
+        <p class="hero-text">Explore popular films, discover what's trending, check ratings and cast, and watch official trailers.</p>
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="Search movies..." autocomplete="off">
+          <button id="searchBtn">Search</button>
+        </div>
+        <div id="searchMessage" class="search-message"></div>
+      </div>
+    </section>
+
+    <section class="section" id="searchSection" hidden>
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">RESULTS</p><h2 id="searchTitle">Search results</h2></div></div>
+        <div class="movie-grid" id="searchGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="trending">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">WHAT'S HOT</p><h2>Trending Now</h2></div>
+          <button class="text-btn" data-scroll="#trending">View all →</button>
+        </div>
+        <div class="movie-grid" id="trendingGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="popular">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">TOP PICKS</p><h2>Popular Movies</h2></div>
+        </div>
+        <div class="movie-grid" id="popularGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="upcoming">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">COMING SOON</p><h2>Upcoming</h2></div>
+        </div>
+        <div class="movie-grid" id="upcomingGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="movieModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <article class="movie-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-btn" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-backdrop-image" id="modalBackdropImage"></div>
+      <div class="modal-content">
+        <div class="modal-poster"><img id="modalPoster" alt=""></div>
+        <div class="modal-info">
+          <p class="eyebrow" id="modalGenres"></p>
+          <h2 id="modalTitle">Movie title</h2>
+          <div class="meta" id="modalMeta"></div>
+          <p id="modalOverview"></p>
+          <div class="cast" id="modalCast"></div>
+          <div class="modal-actions">
+            <a id="trailerBtn" class="primary-btn" href="#" target="_blank" rel="noopener">▶ Official Trailer</a>
+          </div>
+          <p class="disclaimer">CineZone displays movie information and links to official/public trailer sources. It does not host or provide unauthorized movie streams.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="logo"><span class="logo-mark">▶</span><span>Cine<span>Zone</span></span></div>
+      <p>Movie discovery made simple.</p>
+      <small>Movie data provided by TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
